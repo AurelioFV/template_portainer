@@ -282,8 +282,8 @@
             "note": "Default login is admin@admin.com with a password of password. The database created is called bookstackapp and the database user is called bookstack",
             "platform": "linux",
             "repository": {
-                "stackfile": "Template/Stack/bookstack.yml",
-                "url": "https://github.com/Qballjos/portainer_templates"
+                "stackfile": "stacks/bookstack/bookstack.yml",
+                "url": "https://github.com/AurelioFV/template_portainer"
             },
             "title": "Bookstack",
             "type": 3
@@ -339,7 +339,7 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/cockroachdb/docker-stack.yml"
             }
         },
@@ -631,7 +631,7 @@
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
             "platform": "linux",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/datadog-agent/docker-stack.yml"
             },
             "env": [
@@ -690,7 +690,7 @@
             "platform": "linux",
             "logo": "",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/dokku/docker-compose.yml"
             },
             "env": [
@@ -904,7 +904,7 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/fdo/docker-stack.yml"
             },
             "env": [
@@ -1121,7 +1121,7 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ironfunctions.png",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/ironfunctions/docker-stack.yml"
             }
         },
@@ -1282,7 +1282,7 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/liveswitch/docker-stack.yml"
             },
             "env": [
@@ -1302,7 +1302,7 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/liveswitch/docker-compose.yml"
             },
             "env": [
@@ -1487,7 +1487,7 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/microsoft-oms/docker-stack.yml"
             },
             "env": [
@@ -1655,8 +1655,8 @@
             "note": "The database user is nextcloud and the database is nextcloud_db. The host of the database will be located at the bottom of the DB conotainer in portainer.",
             "platform": "linux",
             "repository": {
-                "stackfile": "Template/Stack/nextcloud.yml",
-                "url": "https://github.com/Qballjos/portainer_templates"
+                "stackfile": "stacks/nextcloud/nextcloud.yml",
+                "url": "https://github.com/AurelioFV/template_portainer"
             },
             "title": "Nextcloud",
             "type": 3
@@ -1745,7 +1745,7 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/openamt/docker-compose.yml"
             },
             "env": [
@@ -1781,22 +1781,6 @@
                     "description": "Secret token used to log into Vault (don't include '.' character)."
                 }
             ]
-        },
-        {
-            "type": 2,
-            "title": "OpenFaaS",
-            "name": "func",
-            "description": "Serverless functions made simple",
-            "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080. <b>Warning</b>: the name of the stack must be 'func'.",
-            "categories": [
-                "serverless"
-            ],
-            "platform": "linux",
-            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/openfaas.png",
-            "repository": {
-                "url": "https://github.com/openfaas/faas",
-                "stackfile": "docker-compose.yml"
-            }
         },
         {
             "type": 1,
@@ -1889,8 +1873,8 @@
             "name": "Petio",
             "platform": "linux",
             "repository": {
-                "stackfile": "Template/Stack/petio.yml",
-                "url": "https://github.com/Qballjos/portainer_templates"
+                "stackfile": "stacks/petio/petio.yml",
+                "url": "https://github.com/AurelioFV/template_portainer"
             },
             "title": "Petio",
             "type": 3
@@ -1985,7 +1969,7 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/portainer-agent/docker-stack.yml"
             }
         },
@@ -2275,7 +2259,7 @@
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
             "platform": "linux",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/sematext-agent-docker/docker-stack.yml"
             },
             "env": [
@@ -2558,7 +2542,7 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/redis-cluster/docker-stack.yaml"
             },
             "env": [
@@ -2716,7 +2700,7 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/wordpress/docker-stack.yml"
             },
             "env": [
@@ -2765,7 +2749,7 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
             "repository": {
-                "url": "https://github.com/portainer/templates",
+                "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/wordpress/docker-compose.yml"
             },
             "env": [
