@@ -872,7 +872,6 @@
             "description": "A web file manager",
             "note": "Default credentials: admin/admin",
             "categories": [
-                "filesystem",
                 "Storage"
             ],
             "platform": "linux",
@@ -1116,7 +1115,8 @@
             "title": "Jenkins",
             "description": "Open-source continuous integration tool",
             "categories": [
-                "continuous-integration"
+                "Continuous-Integration",
+                "Other"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/jenkins.png",
@@ -2477,7 +2477,7 @@
             "title": "RabbitMQ",
             "description": "Highly reliable enterprise messaging system",
             "categories": [
-                "messaging"
+                "Messaging"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/rabbitmq.png",
