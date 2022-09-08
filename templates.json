@@ -97,8 +97,6 @@
         },
         {
             "categories": [
-                "Other",
-                "Tools",
                 "Authentication"
             ],
             "description": "An open-source authentication and authorization server providing 2-factor authentication and single sign-on (SSO) for your applications via a web portal.",
@@ -175,8 +173,7 @@
         },
         {
             "categories": [
-                "Other",
-                "Tools"
+                "Authentication"
             ],
             "description": "This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal.",
             "image": "vaultwarden/server:latest",
@@ -199,8 +196,7 @@
         },
         {
             "categories": [
-                "Books",
-                "Other"
+                "Books"
             ],
             "description": "Booksonic is a server and an app for streaming your audiobooks to any pc or android phone. Most of the functionality is also availiable on other platforms that have apps for subsonic.",
             "env": [
@@ -290,7 +286,6 @@
         },
         {
             "categories": [
-                "Cloud",
                 "Books"
             ],
             "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.",
@@ -334,7 +329,7 @@
             "description": "CockroachDB cluster",
             "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
             "categories": [
-                "database"
+                "DB"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
@@ -352,7 +347,6 @@
         },
         {
             "categories": [
-                "Other",
                 "Tools"
             ],
             "description": "Code-server is VS Code running on a remote server, accessible through the browser.",
@@ -407,7 +401,7 @@
             "title": "CommandBox",
             "description": "ColdFusion (CFML) CLI",
             "categories": [
-                "development"
+                "Development"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-commandbox.png",
@@ -466,7 +460,6 @@
         },
         {
             "categories": [
-                "Cloud",
                 "Books"
             ],
             "description": "COPS links to your Calibre library database and allows downloading and emailing of books directly from a web browser and provides a OPDS feed to connect to your devices.",
@@ -505,8 +498,7 @@
         },
         {
             "categories": [
-                "Downloaders",
-                "Video"
+                "Downloaders"
             ],
             "description": "CouchPotato (CP) is an automatic NZB and torrent downloader. You can keep a \"movies I want\"-list and it will search for NZBs/torrents of these movies every X hours. Once a movie is found, it will send it to SABnzbd or download the torrent to a specified directory.",
             "env": [
@@ -583,7 +575,6 @@
         {
             "categories": [
                 "FTP",
-                "Other",
                 "Tools"
             ],
             "description": "davos is an FTP automation tool that periodically scans given host locations for new files. It can be configured for various purposes, including listening for specific files to appear in the host location, ready for it to download and then move, if required. It also supports completion notifications as well as downstream API calls, to further the workflow.",
@@ -638,45 +629,6 @@
                 {
                     "name": "API_KEY",
                     "label": "Datadog API key"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Dokku",
-            "description": "Dokku setup as a container",
-            "categories": [
-                "PaaS"
-            ],
-            "platform": "linux",
-            "logo": "",
-            "image": "dokku/dokku",
-            "ports": [
-                "22/tcp",
-                "80/tcp",
-                "443/tcp"
-            ],
-            "volumes": [
-                {
-                    "container": "/mnt/dokku",
-                    "bind": "/var/lib/dokku"
-                },
-                {
-                    "container": "/var/run/docker.sock",
-                    "bind": "/var/run/docker.sock"
-                }
-            ],
-            "env": [
-                {
-                    "name": "DOKKU_HOSTNAME",
-                    "label": "Dokku hostname",
-                    "description": "Global hostname to be registered by Dokku"
-                },
-                {
-                    "name": "DOKKU_HOST_ROOT",
-                    "label": "Dokku host root",
-                    "default": "/var/lib/dokku/home/dokku",
-                    "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'"
                 }
             ]
         },
@@ -739,8 +691,7 @@
         },
         {
             "categories": [
-                "HomeAutomation",
-                "Management"
+                "HomeAutomation"
             ],
             "description": "Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.",
             "env": [
@@ -814,9 +765,6 @@
         {
             "categories": [
                 "Backup",
-                "Cloud",
-                "Other",
-                "Productivity",
                 "Tools"
             ],
             "description": "Free backup software to store encrypted backups online, Duplicati works with standard protocols like FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud Drive and S3, Google Drive, box.com, Mega, hubiC and many others.",
@@ -882,7 +830,7 @@
             "title": "Elasticsearch",
             "description": "Open-source search and analytics engine",
             "categories": [
-                "database"
+                "DB"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
@@ -925,7 +873,7 @@
             "note": "Default credentials: admin/admin",
             "categories": [
                 "filesystem",
-                "storage"
+                "Storage"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/filebrowser.png",
@@ -1010,8 +958,7 @@
             "description": "Open-source end-to-end software development platform",
             "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
             "categories": [
-                "development",
-                "project-management"
+                "Development"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/gitlab_ce.png",
@@ -1277,7 +1224,7 @@
             "title": "LiveSwitch",
             "description": "A basic LiveSwitch stack with gateway, caching, database and media server",
             "categories": [
-                "media"
+                "Media"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
@@ -1297,7 +1244,7 @@
             "title": "LiveSwitch",
             "description": "A basic LiveSwitch compose with gateway, caching, database and media server",
             "categories": [
-                "media"
+                "Media"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
@@ -1317,7 +1264,7 @@
             "title": "MariaDB",
             "description": "Performance beyond MySQL",
             "categories": [
-                "database"
+                "DB"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
@@ -1376,7 +1323,7 @@
             "title": "Mautic",
             "description": "Open-source marketing automation platform",
             "categories": [
-                "marketing"
+                "Marketing"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mautic.png",
@@ -1403,8 +1350,7 @@
         },
         {
             "categories": [
-                "Downloaders",
-                "Video"
+                "Downloaders"
             ],
             "description": "Medusa, automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.",
             "env": [
@@ -1508,7 +1454,7 @@
             "title": "Minio",
             "description": "A distributed object storage server built for cloud applications and devops",
             "categories": [
-                "storage"
+                "Storage"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
@@ -1542,7 +1488,7 @@
             "title": "Mongo",
             "description": "Open-source document-oriented database",
             "categories": [
-                "database"
+                "DB"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mongo.png",
@@ -1588,7 +1534,7 @@
             "title": "MySQL",
             "description": "The most popular open-source database",
             "categories": [
-                "database"
+                "DB"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
@@ -1726,7 +1672,7 @@
             "title": "NodeJS",
             "description": "JavaScript-based platform for server-side and networking applications",
             "categories": [
-                "development"
+                "Development"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
@@ -1996,7 +1942,7 @@
             "title": "PostgreSQL",
             "description": "The most advanced open-source database",
             "categories": [
-                "database"
+                "DB"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
@@ -2209,7 +2155,7 @@
             "title": "Scality S3",
             "description": "Standalone AWS S3 protocol server",
             "categories": [
-                "storage"
+                "Storage"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/scality-s3.png",
@@ -2293,8 +2239,7 @@
         },
         {
             "categories": [
-                "Downloaders",
-                "Video"
+                "Downloaders"
             ],
             "description": "Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.",
             "env": [
@@ -2339,7 +2284,7 @@
             "title": "SQL Server",
             "description": "Microsoft SQL Server on Linux",
             "categories": [
-                "database"
+                "DB"
             ],
             "platform": "linux",
             "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -2365,7 +2310,7 @@
             "title": "SQL Server",
             "description": "Microsoft SQL Server Developer for Windows containers",
             "categories": [
-                "database"
+                "DB"
             ],
             "platform": "windows",
             "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -2396,7 +2341,7 @@
             "title": "SQL Server Express",
             "description": "Microsoft SQL Server Express for Windows containers",
             "categories": [
-                "database"
+                "DB"
             ],
             "platform": "windows",
             "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -2424,8 +2369,7 @@
         },
         {
             "categories": [
-                "Downloaders",
-                "Video"
+                "Downloaders"
             ],
             "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
             "env": [
@@ -2472,8 +2416,6 @@
         {
             "categories": [
                 "Backup",
-                "Cloud",
-                "Other",
                 "Tools"
             ],
             "description": "Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes.",
@@ -2516,7 +2458,7 @@
             "title": "Redis",
             "description": "Open-source in-memory data structure store",
             "categories": [
-                "database"
+                "DB"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
@@ -2555,7 +2497,7 @@
             "title": "Redis Cluster",
             "description": "Open-source in-memory data structure store - Cluster mode",
             "categories": [
-                "database"
+                "DB"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
@@ -2576,7 +2518,7 @@
             "description": "Open-source project management tool",
             "note": "Default user and password are admin/admin",
             "categories": [
-                "project-management"
+                "Project-Management"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
@@ -2634,7 +2576,6 @@
         },
         {
             "categories": [
-                "Other",
                 "VPN",
                 "Tools"
             ],
@@ -2699,7 +2640,7 @@
             "title": "Ubuntu",
             "description": "Debian-based Linux operating system",
             "categories": [
-                "operating-system"
+                "Operating-System"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
@@ -2731,8 +2672,8 @@
         },
         {
             "categories": [
-                "Other",
-                "Tools"
+                "Tools",
+                "Wiki"
             ],
             "description": "Wikijs A modern, lightweight and powerful wiki app built on NodeJS.",
             "image": "linuxserver/wikijs:latest",
@@ -2777,13 +2718,6 @@
                     "description": "Password used by the MySQL root user."
                 }
             ]
-        },
-        {
-            "type": 4,
-            "title": "Wordpress",
-            "description": "Wordpress setup with a MySQL database",
-            "note": "Deploys a Wordpress instance connected to a MySQL database.",
-            "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/wordpress/edge/docker-stack.yml"
         },
         {
             "categories": [
