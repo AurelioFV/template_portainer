@@ -1735,6 +1735,24 @@
             "command": "/bin/bash"
         },
         {
+            "type": 1,
+            "title": "Onlyoffice-Document-Server",
+            "description": "Onlyoffice-Document-Server Online office suite",
+            "categories": [
+                "Other",
+                "Productivity",
+                "Cloud",
+                "Web"
+            ],
+            "platform": "linux",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJyS8b-u9-sXijjh8NmAktcDg60w2oKeGJgIiKLyI6fRs9RBgus0rfOivJ1seLdH2Zlpc&usqp=CAU",
+            "image": "onlyoffice/documentserver",
+            "ports": [
+                "80/tcp"
+            ],
+            "restart_policy": "always"
+        },
+        {
             "type": 3,
             "title": "OpenAMT",
             "description": "OpenAMT Cloud Toolkit",
