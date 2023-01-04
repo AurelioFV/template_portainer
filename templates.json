@@ -2649,10 +2649,10 @@
             "command": "/bin/bash"
         },
         {
-            "type": 2,
+            "type": 3,
             "title": "WordPress",
-            "description": "WordPress setup with a MySQL database",
-            "note": "Deploys a WordPress instance connected to a MySQL database.",
+            "description": "WordPress setup with a MariaDB database and PhpMyAdmin",
+            "note": "Deploys a WordPress instance connected to a MariaDB database with PhpMyAdmin.",
             "categories": [
                 "CMS"
             ],
@@ -2709,28 +2709,6 @@
                 {
                     "bind": "/portainer/Files/AppData/Config/Wikijs/data",
                     "container": "/data"
-                }
-            ]
-        },
-        {
-            "type": 3,
-            "title": "WordPress",
-            "description": "WordPress setup with a MySQL database",
-            "note": "Deploys a WordPress instance connected to a MySQL database.",
-            "categories": [
-                "CMS"
-            ],
-            "platform": "linux",
-            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
-            "repository": {
-                "url": "https://github.com/AurelioFV/template_portainer",
-                "stackfile": "stacks/wordpress/docker-compose.yml"
-            },
-            "env": [
-                {
-                    "name": "MYSQL_DATABASE_PASSWORD",
-                    "label": "Database root password",
-                    "description": "Password used by the MySQL root user."
                 }
             ]
         },
