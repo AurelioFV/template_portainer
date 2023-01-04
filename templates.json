@@ -2658,7 +2658,7 @@
                 },
                 {
                     "name": "MYSQL_DATABASE",
-                    "label": "Database name password",
+                    "label": "Database name",
                     "description": "Database name."
                 }
             ]
