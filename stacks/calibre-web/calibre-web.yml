@@ -1,0 +1,26 @@
+version: "3"
+volumes:
+  calibre-books:
+  calibre-config:
+  
+networks:
+  frontend:
+    name: frontend
+    
+services:
+  calibre-web:
+    image: linuxserver/calibre-web
+    container_name: calibre-web
+    volumes:
+      - calibre-config:/config
+      - calibre-books:/books
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+      - DOCKER_MODS=linuxserver/calibre-web:calibre
+    ports:
+      - ${PORT}:8083
+    networks:
+      - backend
+    restart: unless-stopped
