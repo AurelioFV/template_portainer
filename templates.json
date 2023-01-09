@@ -632,12 +632,10 @@
                     "default": "bridge"
                 },
                 {
-                    "default": "1000",
                     "label": "PUID",
                     "name": "PUID"
                 },
                 {
-                    "default": "1000",
                     "label": "GUID",
                     "name": "GUID"
                 },
