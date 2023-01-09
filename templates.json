@@ -620,16 +620,6 @@
             },
             "env": [
                 {
-                    "label": "NETWORK FRONTEND",
-                    "name": "NETWORK_FRONTEND",
-                    "default": "frontend"
-                },
-                {
-                    "label": "NETWORK BACKEND",
-                    "name": "NETWORK_BACKEND",
-                    "default": "backend"
-                },
-                {
                     "default": "1000",
                     "label": "PUID",
                     "name": "PUID"
