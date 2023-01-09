@@ -1,0 +1,23 @@
+version: '3.9'
+
+volumes:
+  kavita-books:
+  kavita-config:
+  
+networks:
+  frontend:
+    name: frontend
+    
+services:
+  kavita:
+    image: kizaing/kavita:latest
+    restart: unless-stopped
+    volumes:
+        - kavita-books:/books
+        - kavita-config:/kavita/config
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    ports:
+      - ${PORT}:5000
