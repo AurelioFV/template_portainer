@@ -663,26 +663,6 @@
                 {
                     "label": "PORT",
                     "name": "PORT"
-                },
-                {
-                    "default": "nextcloud",
-                    "label": "Volume Aplication",
-                    "name": "Volume_Aplication"
-                },
-                {
-                    "default": "nextcloud-apps",
-                    "label": "Volume Apps",
-                    "name": "Volume_Apps"
-                },
-                {
-                    "default": "nextcloud-data",
-                    "label": "Volume Data",
-                    "name": "Volume_Data"
-                },
-                {
-                    "default": "nextcloud-db",
-                    "label": "Volume DB",
-                    "name": "Volume_DB"
                 }
             ]
         },
