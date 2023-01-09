@@ -30,7 +30,7 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
-      - ${PORT}:443
+      - ${PORT}:80
     
     networks:
       - ${NETWORK_FRONTEND}
