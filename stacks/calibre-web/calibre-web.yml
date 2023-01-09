@@ -19,7 +19,6 @@ services:
       PUID: ${PUID}
       PGID: ${PGID}
       TZ: ${TZ}
-      DOCKER_MODS: linuxserver/calibre-web:calibre
     ports:
       - ${PORT}:8083
     networks:
