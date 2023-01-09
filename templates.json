@@ -632,14 +632,6 @@
                     "default": "bridge"
                 },
                 {
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "label": "GUID",
-                    "name": "GUID"
-                },
-                {
                     "default": "Europe/Madrid",
                     "label": "TZ",
                     "name": "TZ"
