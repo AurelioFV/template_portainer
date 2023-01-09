@@ -111,18 +111,17 @@
         },
         {
             "type": 3,
-            "title": "Calibre Web",
-            "name": "calibre-web",
-            "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.",
-            "note": "Configuration <ul><li><b>/config</b> - Where Calibre-web should store it's database</li><li><b>/books</b> - Path to your calibre library metadata.db file</li></ul>Default user 'admin/admin123'",
+            "title": "Kavita",
+            "name": "kavita",
+            "description": "Kavita reading eBooks and PDFs",
             "categories": [
                 "Books"
             ],
             "platform": "linux",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/calibre-web-icon.png",
+            "logo": "https://www.kavitareader.com/img/logo.png",
             "repository": {
                 "url": "https://github.com/AurelioFV/template_portainer",
-                "stackfile": "stacks/calibre-web/calibre-web.yml"
+                "stackfile": "stacks/kavita/kavita.yml"
             },
             "env": [
                 {
@@ -141,7 +140,7 @@
                     "name": "TZ"
                 },
                 {
-                    "default": "8083",
+                    "default": "5000",
                     "label": "PORT",
                     "name": "PORT"
                 }
