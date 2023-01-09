@@ -5,10 +5,11 @@ volumes:
   
 networks:
   frontend:
-    name: frontend
+    name: 
     
 services:
   calibre-web:
+    restart: unless-stopped
     image: linuxserver/calibre-web
     container_name: calibre-web
     volumes:
@@ -22,5 +23,4 @@ services:
     ports:
       - ${PORT}:8083
     networks:
-      - backend
-    restart: unless-stopped
+      - frontend
