@@ -22,8 +22,6 @@ services:
       -  ${Volume_Apps}:/var/www/html/custom_apps
       
     environment:
-      PUID: ${PUID}
-      PGID: ${PGID}
       TZ: ${TZ}
       MYSQL_HOST: nextcloud-db
       MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -43,8 +41,6 @@ services:
     volumes:
       - ${Volume_DB}:/var/lib/mysql
     environment:
-      PUID: ${PUID}
-      PGID: ${PGID}
       TZ: ${TZ}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
