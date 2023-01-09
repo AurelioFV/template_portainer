@@ -1,10 +1,10 @@
 version: "3"
 
 volumes:
-  ${Volume_Aplication}:
-  ${Volume_Apps}:
-  ${Volume_Data}:
-  ${Volume_DB}:
+  nextcloud:
+  nextcloud-apps:
+  nextcloud-data:
+  nextcloud-db:
   
 networks:
   ${NETWORK_FRONTEND}:
@@ -17,9 +17,9 @@ services:
     image: nextcloud
     restart: always
     volumes:
-      -  ${Volume_Aplication}:/var/www/html
-      -  ${Volume_Data}:/var/www/html/data
-      -  ${Volume_Apps}:/var/www/html/custom_apps
+      -  nextcloud:/var/www/html
+      -  nextcloud-data:/var/www/html/data
+      -  nextcloud-apps:/var/www/html/custom_apps
       
     environment:
       PUID: ${PUID}
@@ -41,7 +41,7 @@ services:
     restart: always
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     volumes:
-      - ${Volume_DB}:/var/lib/mysql
+      - nextcloud-db:/var/lib/mysql
     environment:
       PUID: ${PUID}
       PGID: ${PGID}
