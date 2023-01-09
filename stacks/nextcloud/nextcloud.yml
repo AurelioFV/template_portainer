@@ -7,10 +7,10 @@ volumes:
   nextcloud-db:
   
 networks:
-  ${NETWORK_FRONTEND}:
-    name: ${NETWORK_FRONTEND}
-  ${NETWORK_BACKEND}:
-    name: ${NETWORK_BACKEND}
+  frontend:
+    name: frontend
+  backend:
+    name: backend
 
 services:
   nextcloud-app:
@@ -33,8 +33,8 @@ services:
       - ${PORT}:80
     
     networks:
-      - ${NETWORK_FRONTEND}
-      - ${NETWORK_BACKEND}
+      - frontend
+      - backend
 
   nextcloud-db:
     image: mariadb
@@ -51,4 +51,4 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     networks:
-      - ${NETWORK_BACKEND}
+      - backend
