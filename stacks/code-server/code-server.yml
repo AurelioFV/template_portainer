@@ -10,7 +10,9 @@ networks:
 services:
   code-server:
     image: lscr.io/linuxserver/code-server:latest
-    container_name: code-server
+    restart: unless-stopped
+    volumes:
+      - code-server:/config
     environment:
       PUID: ${PUID}
       PGID: ${PGID}
@@ -18,8 +20,7 @@ services:
       PASSWORD: ${PASSWORD} #optional
       SUDO_PASSWORD: ${SUDO_PASSWORD} #optional
       PROXY_DOMAIN: ${PROXY_DOMAIN} #optional
-    volumes:
-      - code-server:/config
     ports:
       - 8443:8443
-    restart: unless-stopped
+    networks:
+      - frontend
