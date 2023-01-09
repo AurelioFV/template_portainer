@@ -622,14 +622,12 @@
                 {
                     "label": "NETWORK FRONTEND",
                     "name": "NETWORK_FRONTEND",
-                    "description": "Example: proxy",
-                    "default": "bridge"
+                    "default": "frontend"
                 },
                 {
                     "label": "NETWORK BACKEND",
                     "name": "NETWORK_BACKEND",
-                    "description": "Example: proxy",
-                    "default": "bridge"
+                    "default": "backend"
                 },
                 {
                     "default": "1000",
