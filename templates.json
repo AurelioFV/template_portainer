@@ -663,12 +663,8 @@
                     "name": "MYSQL_DATABASE"
                 },
                 {
-                    "label": "PORT HTTP",
-                    "name": "PORT_HTTP"
-                },
-                {
-                    "label": "PORT HTTPS",
-                    "name": "PORT_HTTPS"
+                    "label": "PORT",
+                    "name": "PORT"
                 },
                 {
                     "default": "nextcloud",
