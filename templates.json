@@ -638,7 +638,7 @@
                 },
                 {
                     "default": "1000",
-                    "label": "PUID",
+                    "label": "GUID",
                     "name": "GUID"
                 },
                 {
