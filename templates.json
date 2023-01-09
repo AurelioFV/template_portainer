@@ -111,8 +111,8 @@
         },
         {
             "type": 3,
-            "title": "Code Server",
-            "name": "code-server",
+            "title": "Calibre Web",
+            "name": "calibre-web",
             "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.",
             "note": "Configuration <ul><li><b>/config</b> - Where Calibre-web should store it's database</li><li><b>/books</b> - Path to your calibre library metadata.db file</li></ul>Default user 'admin/admin123'",
             "categories": [
@@ -141,6 +141,7 @@
                     "name": "TZ"
                 },
                 {
+                    "default": "8083",
                     "label": "PORT",
                     "name": "PORT"
                 }
