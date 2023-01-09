@@ -110,10 +110,20 @@
             "type": 3
         },
         {
+            "type": 3,
+            "title": "Code Server",
+            "name": "code-server",
+            "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.",
+            "note": "Configuration <ul><li><b>/config</b> - Where Calibre-web should store it's database</li><li><b>/books</b> - Path to your calibre library metadata.db file</li></ul>Default user 'admin/admin123'",
             "categories": [
                 "Books"
             ],
-            "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.",
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/calibre-web-icon.png",
+            "repository": {
+                "url": "https://github.com/AurelioFV/template_portainer",
+                "stackfile": "stacks/calibre-web/calibre-web.yml"
+            },
             "env": [
                 {
                     "default": "1000",
@@ -122,29 +132,17 @@
                 },
                 {
                     "default": "1000",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/calibre-web:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/calibre-web-icon.png",
-            "name": "calibre-web",
-            "note": "Configuration <ul><li><b>/config</b> - Where Calibre-web should store it's database</li><li><b>/books</b> - Path to your calibre library metadata.db file</li></ul>",
-            "platform": "linux",
-            "ports": [
-                "8083:8083/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Calibre Web",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Books",
-                    "container": "/books"
+                    "label": "PUID",
+                    "name": "GUID"
                 },
                 {
-                    "bind": "/portainer/Files/AppData/Config/Calibre-web",
-                    "container": "/config"
+                    "default": "Europe/Madrid",
+                    "label": "TZ",
+                    "name": "TZ"
+                },
+                {
+                    "label": "PORT",
+                    "name": "PORT"
                 }
             ]
         },
