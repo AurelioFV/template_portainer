@@ -505,11 +505,11 @@
             ],
             "volumes": [
                 {
-                    "name": "kavita-config",
+                    "volumes": "kavita-config",
                     "container": "/kavita/config"
                 },
                 {
-                    "name": "kavita-books",
+                    "volumes": "kavita-books",
                     "container": "/books"
                 }
             ]
