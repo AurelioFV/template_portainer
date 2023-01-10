@@ -111,43 +111,6 @@
         },
         {
             "type": 3,
-            "title": "Kavita",
-            "name": "kavita",
-            "description": "Kavita reading eBooks and PDFs",
-            "categories": [
-                "Books"
-            ],
-            "platform": "linux",
-            "logo": "https://www.kavitareader.com/img/logo.png",
-            "repository": {
-                "url": "https://github.com/AurelioFV/template_portainer",
-                "stackfile": "stacks/kavita/kavita.yml"
-            },
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "1000",
-                    "label": "PGID",
-                    "name": "PGID"
-                },
-                {
-                    "default": "Europe/Madrid",
-                    "label": "TZ",
-                    "name": "TZ"
-                },
-                {
-                    "default": "5000",
-                    "label": "PORT",
-                    "name": "PORT"
-                }
-            ]
-        },
-        {
-            "type": 3,
             "title": "Code Server",
             "name": "code-server",
             "description": "Code-server is VS Code running on a remote server, accessible through the browser.",
@@ -506,6 +469,109 @@
             "volumes": [
                 {
                     "container": "/var/jenkins_home"
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "title": "MariaDB",
+            "description": "Performance beyond MySQL",
+            "categories": [
+                "DB"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
+            "image": "mariadb:latest",
+            "env": [
+                {
+                    "name": "MYSQL_ROOT_PASSWORD",
+                    "label": "Root password"
+                }
+            ],
+            "ports": [
+                "3306/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/var/lib/mysql"
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "title": "Kavita",
+            "name": "kavita",
+            "description": "Kavita reading eBooks and PDFs",
+            "categories": [
+                "Books"
+            ],
+            "platform": "linux",
+            "logo": "https://www.kavitareader.com/img/logo.png",
+            "image": "kizaing/kavita:latest",
+            "env": [
+                {
+                    "default": "1000",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "1000",
+                    "label": "PGID",
+                    "name": "PGID"
+                },
+                {
+                    "default": "Europe/Madrid",
+                    "label": "TZ",
+                    "name": "TZ"
+                }
+            ],
+            "ports": [
+                "5000/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/kavita/config"
+                },
+                {
+                    "bind": "nextcloud_nextcloud-data/_data/admin/files/Manuales:/books",
+                    "container": "/config"
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "title": "Kavita",
+            "name": "kavita",
+            "description": "Kavita reading eBooks and PDFs",
+            "categories": [
+                "Books"
+            ],
+            "platform": "linux",
+            "logo": "https://www.kavitareader.com/img/logo.png",
+            "repository": {
+                "url": "https://github.com/AurelioFV/template_portainer",
+                "stackfile": "stacks/kavita/kavita.yml"
+            },
+            "env": [
+                {
+                    "default": "1000",
+                    "label": "PUID",
+                    "name": "PUID"
+                },
+                {
+                    "default": "1000",
+                    "label": "PGID",
+                    "name": "PGID"
+                },
+                {
+                    "default": "Europe/Madrid",
+                    "label": "TZ",
+                    "name": "TZ"
+                },
+                {
+                    "default": "5000",
+                    "label": "PORT",
+                    "name": "PORT"
                 }
             ]
         },
