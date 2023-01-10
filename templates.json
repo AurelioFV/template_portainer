@@ -501,17 +501,16 @@
                 }
             ],
             "ports": [
-                "5000/tcp"
+                "5000:5000/tcp"
             ],
             "volumes": [
                 {
-                    "volume":"kavita-config",
+                    "name": "kavita-config",
                     "container": "/kavita/config"
                 },
                 {
-                    "bind": "/var/lib/docker/volumes/nextcloud_nextcloud-data/_data/admin/files/Manuales",
-                    "container": "/books",
-                    "readonly": true
+                    "name": "kavita-books",
+                    "container": "/books"
                 }
             ]
         },
