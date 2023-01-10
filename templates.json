@@ -530,7 +530,8 @@
             ],
             "volumes": [
                 {
-                    "container": "kavita-config:/kavita/config"
+                    "volume":"kavita-config",
+                    "container": "/kavita/config"
                 },
                 {
                     "bind": "/var/lib/docker/volumes/nextcloud_nextcloud-data/_data/admin/files/Manuales",
