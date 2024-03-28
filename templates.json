@@ -132,13 +132,23 @@
                 },
                 {
                     "default": "1000",
-                    "label": "PUID",
+                    "label": "GUID",
                     "name": "GUID"
                 },
                 {
                     "default": "Europe/Madrid",
                     "label": "TZ",
                     "name": "TZ"
+                },
+                {
+                    "default": "es_ES.UTF-8",
+                    "label": "LANG",
+                    "name": "LANG"
+                },
+                {
+                    "default": "es_ES.UTF-8",
+                    "label": "LANGUAGE",
+                    "name": "LANGUAGE"
                 },
                 {
                     "label": "PASSWORD",
