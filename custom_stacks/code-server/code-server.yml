@@ -1,0 +1,28 @@
+version: "3"
+
+volumes:
+  ${VOLUME_NAME}:
+    name: ${VOLUME_NAME}
+  
+networks:
+  ${NETWORK_TYPE}:
+    name: ${NETWORK_TYPE}
+    
+services:
+  code-server:
+    container_name: ${CONTAINER_NAME}
+    image: lscr.io/linuxserver/code-server:latest
+    restart: unless-stopped
+    volumes:
+      - ${VOLUME_NAME}:/config
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+      PASSWORD: ${PASSWORD} #optional
+      SUDO_PASSWORD: ${SUDO_PASSWORD} #optional
+      PROXY_DOMAIN: ${PROXY_DOMAIN} #optional
+    expose::
+      - 8443
+    networks:
+      - ${NETWORK_TYPE}
