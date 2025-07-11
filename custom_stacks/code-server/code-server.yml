@@ -23,7 +23,6 @@ services:
       TZ: ${TZ}
       PASSWORD: ${PASSWORD}
       SUDO_PASSWORD: ${SUDO_PASSWORD}
-      PROXY_DOMAIN: ${PROXY_DOMAIN}
     expose:
       - 8443
     networks:
