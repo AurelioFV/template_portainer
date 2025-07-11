@@ -6,7 +6,7 @@
             "title": "Code Server",
             "name": "vscode",
             "description": "VSCode ejecutándose en un servidor remoto, accesible desde el navegador.",
-            "note": "VSCode ejecutándose en un servidor remoto, accesible desde el navegador.\nNotas:\n  - La red debe existir antes de desplegar el contenedor.\n  - El volumen se creará automáticamente con cada deploy.",
+            "note": "VSCode ejecutándose en un servidor remoto, accesible desde el navegador.<br>Notas:<br>  - La red debe existir antes de desplegar el contenedor.<br>  - El volumen se creará automáticamente con cada deploy.",
             "categories": [
                 "Tools",
                 "IDE"
