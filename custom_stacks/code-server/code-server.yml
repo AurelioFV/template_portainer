@@ -1,11 +1,11 @@
 version: "3"
 
 volumes:
-  ${VOLUME_NAME}:
+  "${VOLUME_NAME}":
     name: ${VOLUME_NAME}
   
 networks:
-  ${NETWORK_TYPE}:
+  "${NETWORK_TYPE}":
     name: ${NETWORK_TYPE}
     
 services:
