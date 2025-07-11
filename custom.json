@@ -54,12 +54,12 @@
                     "description": "Selecciona una red Docker existente. Debe estar creada previamente.",
                     "select": [
                         {
-                            "text": "bridge",
-                            "value": "bridge"
+                            "text": "backend",
+                            "value": "backend"
                         },
                         {
-                            "text": "host",
-                            "value": "host",
+                            "text": "bridge",
+                            "value": "bridge",
                             "default": true
                         },
                         {
