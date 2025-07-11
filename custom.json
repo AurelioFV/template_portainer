@@ -6,7 +6,7 @@
             "title": "Code Server",
             "name": "vscode",
             "description": "VSCode ejecutándose en un servidor remoto, accesible desde el navegador.",
-            "note": "VSCode ejecutándose en un servidor remoto, accesible desde el navegador.<br><br>Notas:<br>  - La red debe existir antes de desplegar el contenedor.<br>  - El volumen se creará automáticamente con cada deploy.",
+            "note": "VSCode ejecutándose en un servidor remoto, accesible desde el navegador.<br>\n<br>Requisitos:<br>  - La red debe existir antes de desplegar el contenedor.<br>  - El volumen indicado debe existir antes de desplegar el contenedor.",
             "categories": [
                 "Tools",
                 "IDE"
@@ -88,7 +88,7 @@
                     "default": "vscode_vm",
                     "label": "Volume Name (Data)",
                     "name": "VOLUME_NAME",
-                    "description": "Nombre del volumen que se creará para almacenar los datos de la app"
+                    "description": "Nombre del volumen que se usará para almacenar los datos de la aplicació"
                 },
                 {
                     "default": 8443,

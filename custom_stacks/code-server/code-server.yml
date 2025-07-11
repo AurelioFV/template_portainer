@@ -3,6 +3,7 @@ version: "3"
 volumes:
   vol_data:
     name: ${VOLUME_NAME}
+    external: true
   
 networks:
   net:
