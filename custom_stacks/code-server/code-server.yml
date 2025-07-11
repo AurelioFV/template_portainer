@@ -1,11 +1,11 @@
 version: "3"
 
 volumes:
-  "${VOLUME_NAME}":
+  vol_app:
     name: ${VOLUME_NAME}
   
 networks:
-  "${NETWORK_TYPE}":
+  net:
     name: ${NETWORK_TYPE}
     
 services:
@@ -14,7 +14,7 @@ services:
     image: lscr.io/linuxserver/code-server:latest
     restart: unless-stopped
     volumes:
-      - ${VOLUME_NAME}:/config
+      - vol_app:/config
     environment:
       PUID: ${PUID}
       PGID: ${PGID}
@@ -25,4 +25,4 @@ services:
     expose:
       - 8443
     networks:
-      - ${NETWORK_TYPE}
+      - net
