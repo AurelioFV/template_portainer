@@ -112,9 +112,9 @@
         {
             "type": 3,
             "title": "Code Server",
-            "name": "code-server",
-            "description": "Code-server is VS Code running on a remote server, accessible through the browser.",
-            "note": "Code-server is VS Code running on a remote server, accessible through the browser.",
+            "name": "vscode_dev",
+            "description": "Code-server es VS Code ejecutándose en un servidor remoto, accesible desde el navegador. La red especificada debe existir previamente. El volumen se creará nuevo.",
+            "note": "Code-server es VS Code ejecutándose en un servidor remoto, accesible desde el navegador. Asegúrate de que la red especificada exista antes de desplegar el contenedor. El volumen para la aplicación se creará automáticamente si no existe.",
             "categories": [
                 "Tools",
                 "IDE"
@@ -129,54 +129,65 @@
                 {
                     "default": "1000",
                     "label": "PUID",
-                    "name": "PUID"
+                    "name": "PUID",
+                    "description": "User ID del usuario dentro del contenedor (normalmente 1000)"
                 },
                 {
                     "default": "1000",
                     "label": "PGID",
-                    "name": "PGID"
+                    "name": "PGID",
+                    "description": "Group ID del usuario dentro del contenedor (normalmente 1000)"
                 },
                 {
                     "default": "Europe/Madrid",
                     "label": "TZ",
-                    "name": "TZ"
+                    "name": "TZ",
+                    "description": "Zona horaria del contenedor (ej. Europe/Madrid)"
                 },
                 {
                     "default": "es_ES.UTF-8",
                     "label": "LANG",
-                    "name": "LANG"
+                    "name": "LANG",
+                    "description": "Idioma del sistema dentro del contenedor"
                 },
                 {
                     "default": "es_ES.UTF-8",
                     "label": "LANGUAGE",
-                    "name": "LANGUAGE"
+                    "name": "LANGUAGE",
+                    "description": "Lenguaje preferido para la localización"
                 },
                 {
                     "default": "host",
-                    "label": "NETWORK_TYPE",
-                    "name": "NETWORK_TYPE"
+                    "label": "Network",
+                    "name": "NETWORK_TYPE",
+                    "description": "Selecciona una red Docker existente. Debe estar creada previamente.",
+                    "select": [
+                        "bridge",
+                        "host",
+                        "prx-network"
+                    ]
                 },
                 {
                     "label": "PASSWORD",
-                    "name": "PASSWORD"
+                    "name": "PASSWORD",
+                    "description": "Contraseña para acceder a code-server"
                 },
                 {
                     "label": "SUDO_PASSWORD",
-                    "name": "SUDO_PASSWORD"
-                },
-                {
-                    "label": "PROXY_DOMAIN",
-                    "name": "PROXY_DOMAIN"
+                    "name": "SUDO_PASSWORD",
+                    "description": "Contraseña para usar sudo dentro del contenedor"
                 },
                 {
                     "default": "vscode_dev",
-                    "label": "CONTAINER_NAME",
-                    "name": "CONTAINER_NAME"
+                    "label": "CONTAINER NAME",
+                    "name": "CONTAINER_NAME",
+                    "description": "Nombre que tendrá el contenedor en Docker"
                 },
                 {
                     "default": "vscode_dev",
-                    "label": "VOLUME_NAME",
-                    "name": "VOLUME_NAME"
+                    "label": "VOLUME NAME APP",
+                    "name": "VOLUME_NAME",
+                    "description": "Nombre del volumen que se creará para almacenar los datos de la app"
                 }
             ]
         },
