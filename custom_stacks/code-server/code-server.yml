@@ -25,6 +25,6 @@ services:
       SUDO_PASSWORD: ${SUDO_PASSWORD}
       PROXY_DOMAIN: ${PROXY_DOMAIN}
     expose:
-      - ${EXPOSE_SERVICE}
+      - 8443
     networks:
       - net

@@ -88,13 +88,7 @@
                     "default": "vscode_vm",
                     "label": "Volume Name (Data)",
                     "name": "VOLUME_NAME",
-                    "description": "Nombre del volumen que se usará para almacenar los datos de la aplicació"
-                },
-                {
-                    "default": "8443",
-                    "label": "Expose Port",
-                    "name": "EXPOSE_SERVICE",
-                    "description": "Puerto de servicio que se usara en el Expose"
+                    "description": "Nombre del volumen que se usará para almacenar los datos de la aplicación"
                 }
             ]
         }
