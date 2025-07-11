@@ -133,8 +133,8 @@
                 },
                 {
                     "default": "1000",
-                    "label": "GUID",
-                    "name": "GUID"
+                    "label": "PGID",
+                    "name": "PGID"
                 },
                 {
                     "default": "Europe/Madrid",
