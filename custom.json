@@ -157,8 +157,7 @@
                     "description": "Lenguaje preferido para la localización"
                 },
                 {
-                    "default": "host",
-                    "label": "Network",
+                    "label": "NETWORK_TYPE",
                     "name": "NETWORK_TYPE",
                     "description": "Selecciona una red Docker existente. Debe estar creada previamente.",
                     "select": [
