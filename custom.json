@@ -91,7 +91,7 @@
                     "description": "Nombre del volumen que se usará para almacenar los datos de la aplicació"
                 },
                 {
-                    "default": 8443,
+                    "default": "8443",
                     "label": "Expose Port",
                     "name": "EXPOSE_SERVICE",
                     "description": "Puerto de servicio que se usara en el Expose"
