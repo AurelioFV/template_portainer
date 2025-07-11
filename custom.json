@@ -162,7 +162,7 @@
                     "description": "Selecciona una red Docker existente. Debe estar creada previamente.",
                     "select": [
                         {
-                            "text": "bridge (por defecto)",
+                            "text": "bridge",
                             "value": "bridge"
                         },
                         {
