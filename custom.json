@@ -152,6 +152,11 @@
                     "name": "LANGUAGE"
                 },
                 {
+                    "default": "host",
+                    "label": "NETWORK_TYPE",
+                    "name": "NETWORK_TYPE"
+                },
+                {
                     "label": "PASSWORD",
                     "name": "PASSWORD"
                 },
@@ -164,14 +169,12 @@
                     "name": "PROXY_DOMAIN"
                 },
                 {
-                    "label": "NETWORK_TYPE",
-                    "name": "NETWORK_TYPE"
-                },
-                {
+                    "default": "vscode_dev",
                     "label": "CONTAINER_NAME",
                     "name": "CONTAINER_NAME"
                 },
                 {
+                    "default": "vscode_dev",
                     "label": "VOLUME_NAME",
                     "name": "VOLUME_NAME"
                 }

@@ -22,7 +22,7 @@ services:
       PASSWORD: ${PASSWORD} #optional
       SUDO_PASSWORD: ${SUDO_PASSWORD} #optional
       PROXY_DOMAIN: ${PROXY_DOMAIN} #optional
-    expose::
+    expose:
       - 8443
     networks:
       - ${NETWORK_TYPE}
