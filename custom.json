@@ -161,9 +161,19 @@
                     "name": "NETWORK_TYPE",
                     "description": "Selecciona una red Docker existente. Debe estar creada previamente.",
                     "select": [
-                        "bridge",
-                        "host",
-                        "prx-network"
+                        {
+                            "text": "bridge (por defecto)",
+                            "value": "bridge"
+                        },
+                        {
+                            "text": "host",
+                            "value": "host",
+                            "default": true
+                        },
+                        {
+                            "text": "prx-network",
+                            "value": "prx-network"
+                        }
                     ]
                 },
                 {
