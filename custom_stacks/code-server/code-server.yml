@@ -1,7 +1,7 @@
 version: "3"
 
 volumes:
-  vol_app:
+  vol_data:
     name: ${VOLUME_NAME}
   
 networks:
@@ -15,15 +15,15 @@ services:
     image: lscr.io/linuxserver/code-server:latest
     restart: unless-stopped
     volumes:
-      - vol_app:/config
+      - vol_data:/config
     environment:
       PUID: ${PUID}
       PGID: ${PGID}
       TZ: ${TZ}
-      PASSWORD: ${PASSWORD} #optional
-      SUDO_PASSWORD: ${SUDO_PASSWORD} #optional
-      PROXY_DOMAIN: ${PROXY_DOMAIN} #optional
+      PASSWORD: ${PASSWORD}
+      SUDO_PASSWORD: ${SUDO_PASSWORD}
+      PROXY_DOMAIN: ${PROXY_DOMAIN}
     expose:
-      - 8443
+      - ${EXPOSE_SERVICE}
     networks:
       - net
