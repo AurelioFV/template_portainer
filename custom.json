@@ -4,12 +4,13 @@
         {
             "type": 3,
             "title": "Code Server",
-            "name": "vscode",
+            "name": "tmp_vscode",
             "description": "VSCode ejecutándose en un servidor remoto, accesible desde el navegador.",
             "note": "VSCode ejecutándose en un servidor remoto, accesible desde el navegador.<br>\n<br><br>Requisitos:<br>  - La red debe existir antes de desplegar el contenedor.<br>  - El volumen indicado debe existir antes de desplegar el contenedor.",
             "categories": [
-                "Tools",
-                "IDE"
+                "Desarrollo",
+                "Herramientas",
+                "Editor"
             ],
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/code-server.png",
@@ -80,8 +81,8 @@
                 },
                 {
                     "default": "vscode_cn",
-                    "label": "Container Name",
-                    "name": "CONTAINER_NAME",
+                    "label": "Hostname",
+                    "name": "HOSTNAME",
                     "description": "Nombre que tendrá el contenedor en Docker"
                 },
                 {
@@ -95,14 +96,15 @@
         {
             "type": 3,
             "title": "Nginx Proxy Manager",
-            "name": "npm",
+            "name": "tmp_npm",
             "description": "Nginx Proxy Manager es una herramienta de administración de proxies inversos basada en Nginx, que te permite gestionar proxies, SSL y redes internas de manera fácil a través de una interfaz web. Ideal para manejar aplicaciones web y otros servicios que requieren enrutamiento a través de un servidor Nginx.",
             "note": "Este template facilita el despliegue de Nginx Proxy Manager en Portainer.\n<br>Notas:\n<br>  - Asegúrate de tener configurada una red de Docker antes de iniciar el contenedor.\n<br>  - El contenedor requiere puertos específicos para ser accesible desde el navegador.\n<br>  - Accede al panel de administración a través de la URL configurada y las credenciales predeterminadas.\n<br>  - Los siguientes puertos serán utilizados:\n<br>    - **Puerto 80**: HTTP\n<br>    - **Puerto 443**: HTTPS\n<br>    - **Puerto 81**: Interfaz de administración",
             "categories": [
                 "Web",
                 "Proxy",
                 "Networking",
-                "Reverse Proxy"
+                "Reverse Proxy",
+                "Load Balancer"
             ],
             "platform": "linux",
             "logo": "https://nginxproxymanager.com/logo.svg",
