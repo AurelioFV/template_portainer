@@ -158,12 +158,6 @@
                     "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
                 },
                 {
-                    "default": "npm_db_vm",
-                    "label": "Volume Name (Base de Datos)",
-                    "name": "VOLUME_NAME_DB",
-                    "description": "Nombre del volumen Docker donde se almacenarán los datos de la base de datos de Nginx Proxy Manager."
-                },
-                {
                     "default": "npm",
                     "label": "MySQL Database",
                     "name": "MYSQL_DATABASE",
@@ -184,6 +178,12 @@
                     "label": "MySQL Root Password",
                     "name": "MYSQL_ROOT_PASSWORD",
                     "description": "Contraseña del usuario root de MySQL. Utilizado para acceder a la base de datos con privilegios administrativos."
+                },
+                {
+                    "default": "npm_db_vm",
+                    "label": "Volume Name (Base de Datos)",
+                    "name": "VOLUME_NAME_DB",
+                    "description": "Nombre del volumen Docker donde se almacenarán los datos de la base de datos de Nginx Proxy Manager."
                 },
                 {
                     "default": "npm-app",
