@@ -21,8 +21,8 @@ networks:
     
 services:
   npm-app:
-    container_name: tmp_${HOSTNAME}
-    hostname: tmp_${HOSTNAME}
+    container_name: tmp_${NPM_HOSTNAME}
+    hostname: tmp_${NPM_HOSTNAME}
     image: jc21/nginx-proxy-manager:2.9.18
     restart: always
     ports:
@@ -45,8 +45,8 @@ services:
       - net_be
 
   npm-db:
-    container_name: npm-db
-    hostname: npm-db
+    container_name: tmp_${DB_HOSTNAME}
+    hostname: tmp_${DB_HOSTNAME}
     image: jc21/mariadb-aria:latest
     restart: always
     environment:

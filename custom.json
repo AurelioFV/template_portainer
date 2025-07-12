@@ -199,8 +199,14 @@
                 },
                 {
                     "default": "npm",
-                    "label": "Hostname",
-                    "name": "HOSTNAME",
+                    "label": "NPM Hostname",
+                    "name": "NPM_HOSTNAME",
+                    "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
+                },
+                {
+                    "default": "npm-db",
+                    "label": "DB Hostname",
+                    "name": "DB_HOSTNAME",
                     "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
                 },
                 {
