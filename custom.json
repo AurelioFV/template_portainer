@@ -124,6 +124,18 @@
                     "description": "Puerto de conexión de MySQL (el valor predeterminado es 3306)."
                 },
                 {
+                    "default": "npm-db",
+                    "label": "DB Hostname",
+                    "name": "DB_HOSTNAME",
+                    "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
+                },
+                {
+                    "default": "npm_db_vm",
+                    "label": "Volume Name (Base de Datos)",
+                    "name": "VOLUME_NAME_DB",
+                    "description": "Nombre del volumen Docker donde se almacenarán los datos de la base de datos de Nginx Proxy Manager."
+                },
+                {
                     "default": "npm",
                     "label": "MySQL Database",
                     "name": "MYSQL_DATABASE",
@@ -204,12 +216,6 @@
                     "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
                 },
                 {
-                    "default": "npm-db",
-                    "label": "DB Hostname",
-                    "name": "DB_HOSTNAME",
-                    "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
-                },
-                {
                     "default": "npm_app_vm",
                     "label": "Volume Name (App)",
                     "name": "VOLUME_NAME_APP",
@@ -220,12 +226,6 @@
                     "label": "Volume Name (SSL)",
                     "name": "VOLUME_NAME_SSL",
                     "description": "Nombre del volumen Docker donde se almacenarán los certificados SSL de la aplicación."
-                },
-                {
-                    "default": "npm_db_vm",
-                    "label": "Volume Name (Base de Datos)",
-                    "name": "VOLUME_NAME_DB",
-                    "description": "Nombre del volumen Docker donde se almacenarán los datos de la base de datos de Nginx Proxy Manager."
                 }
             ]
         }
