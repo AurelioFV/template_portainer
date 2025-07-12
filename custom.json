@@ -112,64 +112,6 @@
             },
             "env": [
                 {
-                    "name": "DB_MYSQL_HOST",
-                    "default": "npm-db",
-                    "preset": true,
-                    "description": "Dirección del contenedor de la base de datos MySQL. En este caso, el contenedor predeterminado es 'npm-db'."
-                },
-                {
-                    "name": "DB_MYSQL_PORT",
-                    "default": "3306",
-                    "preset": true,
-                    "description": "Puerto de conexión de MySQL (el valor predeterminado es 3306)."
-                },
-                {
-                    "default": "npm-db",
-                    "label": "DB Hostname",
-                    "name": "DB_HOSTNAME",
-                    "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
-                },
-                {
-                    "default": "npm_db_vm",
-                    "label": "Volume Name (Base de Datos)",
-                    "name": "VOLUME_NAME_DB",
-                    "description": "Nombre del volumen Docker donde se almacenarán los datos de la base de datos de Nginx Proxy Manager."
-                },
-                {
-                    "default": "npm",
-                    "label": "MySQL Database",
-                    "name": "MYSQL_DATABASE",
-                    "description": "Nombre de la base de datos en MySQL que Nginx Proxy Manager usará para almacenar la configuración."
-                },
-                {
-                    "default": "npm",
-                    "label": "MySQL User",
-                    "name": "MYSQL_USER",
-                    "description": "Nombre de usuario de la base de datos MySQL utilizado por Nginx Proxy Manager para acceder a la base de datos."
-                },
-                {
-                    "label": "MySQL Password",
-                    "name": "MYSQL_PASSWORD",
-                    "description": "Contraseña del usuario de la base de datos MySQL configurado para Nginx Proxy Manager."
-                },
-                {
-                    "label": "MySQL Root Password",
-                    "name": "MYSQL_ROOT_PASSWORD",
-                    "description": "Contraseña del usuario root de MySQL. Utilizado para acceder a la base de datos con privilegios administrativos."
-                },
-                {
-                    "default": "admin@example.com",
-                    "label": "NPM Initial Admin Email",
-                    "name": "INITIAL_ADMIN_EMAIL",
-                    "description": "Correo electrónico del usuario administrador inicial de Nginx Proxy Manager."
-                },
-                {
-                    "default": "changeme",
-                    "label": "NPM Initial Admin Password",
-                    "name": "INITIAL_ADMIN_PASSWORD",
-                    "description": "Contraseña inicial para el usuario administrador de Nginx Proxy Manager. Cambia esta contraseña por seguridad."
-                },
-                {
                     "label": "Network FrontEnd",
                     "name": "NETWORK_FRONTEND",
                     "description": "Selecciona una red Docker existente para la parte frontal del contenedor. Debe estar creada previamente.",
@@ -210,10 +152,68 @@
                     ]
                 },
                 {
+                    "default": "npm-db",
+                    "label": "DB Hostname",
+                    "name": "DB_HOSTNAME",
+                    "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
+                },
+                {
+                    "default": "npm_db_vm",
+                    "label": "Volume Name (Base de Datos)",
+                    "name": "VOLUME_NAME_DB",
+                    "description": "Nombre del volumen Docker donde se almacenarán los datos de la base de datos de Nginx Proxy Manager."
+                },
+                {
+                    "default": "npm",
+                    "label": "MySQL Database",
+                    "name": "MYSQL_DATABASE",
+                    "description": "Nombre de la base de datos en MySQL que Nginx Proxy Manager usará para almacenar la configuración."
+                },
+                {
+                    "default": "npm",
+                    "label": "MySQL User",
+                    "name": "MYSQL_USER",
+                    "description": "Nombre de usuario de la base de datos MySQL utilizado por Nginx Proxy Manager para acceder a la base de datos."
+                },
+                {
+                    "label": "MySQL Password",
+                    "name": "MYSQL_PASSWORD",
+                    "description": "Contraseña del usuario de la base de datos MySQL configurado para Nginx Proxy Manager."
+                },
+                {
+                    "label": "MySQL Root Password",
+                    "name": "MYSQL_ROOT_PASSWORD",
+                    "description": "Contraseña del usuario root de MySQL. Utilizado para acceder a la base de datos con privilegios administrativos."
+                },
+                {
                     "default": "npm-app",
                     "label": "NPM Hostname",
                     "name": "NPM_HOSTNAME",
                     "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
+                },
+                {
+                    "name": "DB_MYSQL_HOST",
+                    "default": "npm-db",
+                    "preset": true,
+                    "description": "Dirección del contenedor de la base de datos MySQL. En este caso, el contenedor predeterminado es 'npm-db'."
+                },
+                {
+                    "name": "DB_MYSQL_PORT",
+                    "default": "3306",
+                    "preset": true,
+                    "description": "Puerto de conexión de MySQL (el valor predeterminado es 3306)."
+                },
+                {
+                    "default": "admin@example.com",
+                    "label": "NPM Initial Admin Email",
+                    "name": "INITIAL_ADMIN_EMAIL",
+                    "description": "Correo electrónico del usuario administrador inicial de Nginx Proxy Manager."
+                },
+                {
+                    "default": "changeme",
+                    "label": "NPM Initial Admin Password",
+                    "name": "INITIAL_ADMIN_PASSWORD",
+                    "description": "Contraseña inicial para el usuario administrador de Nginx Proxy Manager. Cambia esta contraseña por seguridad."
                 },
                 {
                     "default": "npm_app_vm",
