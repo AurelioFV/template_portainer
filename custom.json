@@ -198,7 +198,7 @@
                     ]
                 },
                 {
-                    "default": "npm",
+                    "default": "npm-app",
                     "label": "NPM Hostname",
                     "name": "NPM_HOSTNAME",
                     "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
