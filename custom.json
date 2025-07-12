@@ -6,7 +6,7 @@
             "title": "Code Server",
             "name": "vscode",
             "description": "VSCode ejecutándose en un servidor remoto, accesible desde el navegador.",
-            "note": "VSCode ejecutándose en un servidor remoto, accesible desde el navegador.<br>\n<br>Requisitos:<br>  - La red debe existir antes de desplegar el contenedor.<br>  - El volumen indicado debe existir antes de desplegar el contenedor.",
+            "note": "VSCode ejecutándose en un servidor remoto, accesible desde el navegador.<br>\n<br><br>Requisitos:<br>  - La red debe existir antes de desplegar el contenedor.<br>  - El volumen indicado debe existir antes de desplegar el contenedor.",
             "categories": [
                 "Tools",
                 "IDE"
@@ -15,7 +15,7 @@
             "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/code-server.png",
             "repository": {
                 "url": "https://github.com/AurelioFV/template_portainer",
-                "stackfile": "custom_stacks/code-server/code-server.yml"
+                "stackfile": "custom_stacks/code-server/vscode.yml"
             },
             "env": [
                 {
@@ -50,7 +50,7 @@
                 },
                 {
                     "label": "Network",
-                    "name": "NETWORK_TYPE",
+                    "name": "NETWORK",
                     "description": "Selecciona una red Docker existente. Debe estar creada previamente.",
                     "select": [
                         {
@@ -89,6 +89,137 @@
                     "label": "Volume Name (Data)",
                     "name": "VOLUME_NAME",
                     "description": "Nombre del volumen que se usará para almacenar los datos de la aplicación"
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "title": "Nginx Proxy Manager",
+            "name": "npm",
+            "description": "Nginx Proxy Manager es una herramienta de administración de proxies inversos basada en Nginx, que te permite gestionar proxies, SSL y redes internas de manera fácil a través de una interfaz web. Ideal para manejar aplicaciones web y otros servicios que requieren enrutamiento a través de un servidor Nginx.",
+            "note": "Este template facilita el despliegue de Nginx Proxy Manager en Portainer.\n<br>Notas:\n<br>  - Asegúrate de tener configurada una red de Docker antes de iniciar el contenedor.\n<br>  - El contenedor requiere puertos específicos para ser accesible desde el navegador.\n<br>  - Accede al panel de administración a través de la URL configurada y las credenciales predeterminadas.\n<br>  - Los siguientes puertos serán utilizados:\n<br>    - **Puerto 80**: HTTP\n<br>    - **Puerto 443**: HTTPS\n<br>    - **Puerto 81**: Interfaz de administración",
+            "categories": [
+                "Web",
+                "Proxy",
+                "Networking",
+                "Reverse Proxy"
+            ],
+            "platform": "linux",
+            "logo": "https://nginxproxymanager.com/logo.svg",
+            "repository": {
+                "url": "https://github.com/AurelioFV/template_portainer",
+                "stackfile": "custom_stacks/nginx_proxy_manager/npm.yml"
+            },
+            "env": [
+                {
+                    "name": "DB_MYSQL_HOST",
+                    "default": "npm-db",
+                    "preset": true,
+                    "description": "Dirección del contenedor de la base de datos MySQL. En este caso, el contenedor predeterminado es 'npm-db'."
+                },
+                {
+                    "name": "DB_MYSQL_PORT",
+                    "default": "3306",
+                    "preset": true,
+                    "description": "Puerto de conexión de MySQL (el valor predeterminado es 3306)."
+                },
+                {
+                    "default": "npm",
+                    "label": "MySQL Database",
+                    "name": "MYSQL_DATABASE",
+                    "description": "Nombre de la base de datos en MySQL que Nginx Proxy Manager usará para almacenar la configuración."
+                },
+                {
+                    "default": "npm",
+                    "label": "MySQL User",
+                    "name": "MYSQL_USER",
+                    "description": "Nombre de usuario de la base de datos MySQL utilizado por Nginx Proxy Manager para acceder a la base de datos."
+                },
+                {
+                    "label": "MySQL Password",
+                    "name": "MYSQL_PASSWORD",
+                    "description": "Contraseña del usuario de la base de datos MySQL configurado para Nginx Proxy Manager."
+                },
+                {
+                    "label": "MySQL Root Password",
+                    "name": "MYSQL_ROOT_PASSWORD",
+                    "description": "Contraseña del usuario root de MySQL. Utilizado para acceder a la base de datos con privilegios administrativos."
+                },
+                {
+                    "default": "admin@example.com",
+                    "label": "NPM Initial Admin Email",
+                    "name": "INITIAL_ADMIN_EMAIL",
+                    "description": "Correo electrónico del usuario administrador inicial de Nginx Proxy Manager."
+                },
+                {
+                    "default": "changeme",
+                    "label": "NPM Initial Admin Password",
+                    "name": "INITIAL_ADMIN_PASSWORD",
+                    "description": "Contraseña inicial para el usuario administrador de Nginx Proxy Manager. Cambia esta contraseña por seguridad."
+                },
+                {
+                    "label": "Network FrontEnd",
+                    "name": "NETWORK_FRONTEND",
+                    "description": "Selecciona una red Docker existente para la parte frontal del contenedor. Debe estar creada previamente.",
+                    "select": [
+                        {
+                            "text": "backend",
+                            "value": "backend"
+                        },
+                        {
+                            "text": "bridge",
+                            "value": "bridge"
+                        },
+                        {
+                            "text": "prx-network",
+                            "value": "prx-network",
+                            "default": true
+                        }
+                    ]
+                },
+                {
+                    "label": "Network BackEnd",
+                    "name": "NETWORK_BACKEND",
+                    "description": "Selecciona una red Docker existente para la parte posterior del contenedor. Debe estar creada previamente.",
+                    "select": [
+                        {
+                            "text": "backend",
+                            "value": "backend",
+                            "default": true
+                        },
+                        {
+                            "text": "bridge",
+                            "value": "bridge"
+                        },
+                        {
+                            "text": "prx-network",
+                            "value": "prx-network"
+                        }
+                    ]
+                },
+                {
+                    "default": "npm",
+                    "label": "Hostname",
+                    "name": "HOSTNAME",
+                    "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
+                },
+                {
+                    "default": "npm_app_vm",
+                    "label": "Volume Name (App)",
+                    "name": "VOLUME_NAME_APP",
+                    "description": "Nombre del volumen Docker donde se almacenarán los datos de la aplicación Nginx Proxy Manager."
+                },
+                {
+                    "default": "npm_ssl_vm",
+                    "label": "Volume Name (SSL)",
+                    "name": "VOLUME_NAME_SSL",
+                    "description": "Nombre del volumen Docker donde se almacenarán los certificados SSL de la aplicación."
+                },
+                {
+                    "default": "npm_db_vm",
+                    "label": "Volume Name (Base de Datos)",
+                    "name": "VOLUME_NAME_DB",
+                    "description": "Nombre del volumen Docker donde se almacenarán los datos de la base de datos de Nginx Proxy Manager."
                 }
             ]
         }

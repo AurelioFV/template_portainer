@@ -12,7 +12,8 @@ networks:
     
 services:
   code-server:
-    container_name: ${CONTAINER_NAME}
+    container_name: tmp_${HOSTNAME}
+    hostname: tmp_${HOSTNAME}
     image: lscr.io/linuxserver/code-server:latest
     restart: unless-stopped
     volumes:

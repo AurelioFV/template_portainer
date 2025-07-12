@@ -1,0 +1,60 @@
+version: '3'
+
+volumes:
+  vol_ssl:
+    name: ${VOLUME_NAME_SSL}
+    external: true
+  vol_app:
+    name: ${VOLUME_NAME_APP}
+    external: true
+  vol_db:
+    name: ${VOLUME_NAME_DB}
+    external: true
+  
+networks:
+  net_fe:
+    name: ${NETWORK_FRONTEND}
+    external: true
+  net_be:
+    name: ${NETWORK_BACKEND}
+    external: true
+    
+services:
+  npm-app:
+    container_name: tmp_${HOSTNAME}
+    hostname: tmp_${HOSTNAME}
+    image: jc21/nginx-proxy-manager:2.9.18
+    restart: always
+    ports:
+      - "5580:80"
+      - "5581:81"
+      - "5443:443"
+    environment:
+      - DB_MYSQL_HOST=${DB_MYSQL_HOST}
+      - DB_MYSQL_PORT=${DB_MYSQL_PORT}
+      - DB_MYSQL_USER=${MYSQL_USER}
+      - DB_MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - DB_MYSQL_NAME=${MYSQL_DATABASE}
+      - INITIAL_ADMIN_EMAIL=${INITIAL_ADMIN_EMAIL}
+      - INITIAL_ADMIN_PASSWORD=${INITIAL_ADMIN_PASSWORD}
+    volumes:
+      - vol_app:/data
+      - vol_ssl:/etc/letsencrypt
+    networks:
+      - net_fe
+      - net_be
+
+  npm-db:
+    container_name: npm-db
+    hostname: npm-db
+    image: jc21/mariadb-aria:latest
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - vol_db:/var/lib/mysql
+    networks:
+      - net_be
