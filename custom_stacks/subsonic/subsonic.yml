@@ -13,7 +13,7 @@ volumes:
   
 networks:
   net:
-    name: ${NETWORK_FRONTEND}
+    name: ${NETWORK}
     external: true
 
 services:
@@ -28,11 +28,10 @@ services:
       - vol_data:${SUBSONIC_HOME}
     environment:
       - LANG=${LANG}
-      - LC_ALL=${LC_ALL}
       - LANGUAGE=${LANGUAGE}
       - SUBSONIC_HOME=${SUBSONIC_HOME}
       - SUBSONIC_HOST=${SUBSONIC_HOST}
-      - SUBSONIC_PORT=5000
+      - SUBSONIC_PORT=4040
       - SUBSONIC_HTTPS_PORT=${SUBSONIC_HTTPS_PORT}
       - SUBSONIC_CONTEXT_PATH=${SUBSONIC_CONTEXT_PATH}
       - SUBSONIC_MAX_MEMORY=${SUBSONIC_MAX_MEMORY}
@@ -41,8 +40,10 @@ services:
       - SUBSONIC_DEFAULT_PLAYLIST_FOLDER=${SUBSONIC_DEFAULT_PLAYLIST_FOLDER}
       - SUBSONIC_UID=${SUBSONIC_UID}
       - SUBSONIC_GID=${SUBSONIC_GID}
-    expose:
-      - 5000
+    # expose:
+    #   - 5000
+    ports:
+      - 4040:4040
     networks:
       - net
 

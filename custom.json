@@ -257,9 +257,9 @@
             },
             "env": [
                 {
-                    "label": "Network FrontEnd",
-                    "name": "NETWORK_FRONTEND",
-                    "description": "Selecciona una red Docker existente para el Fronend. Debe estar creada previamente.",
+                    "label": "Network",
+                    "name": "NETWORK",
+                    "description": "Selecciona una red Docker. Debe estar creada previamente.",
                     "select": [
                         {
                             "text": "backend",
@@ -277,36 +277,10 @@
                     ]
                 },
                 {
-                    "label": "Network BackEnd",
-                    "name": "NETWORK_BACKEND",
-                    "description": "Selecciona una red Docker para el Backend. Debe estar creada previamente.",
-                    "select": [
-                        {
-                            "text": "backend",
-                            "value": "backend",
-                            "default": true
-                        },
-                        {
-                            "text": "bridge",
-                            "value": "bridge"
-                        },
-                        {
-                            "text": "prx-network",
-                            "value": "prx-network"
-                        }
-                    ]
-                },
-                {
                     "default": "es_ES.UTF-8",
                     "label": "Lang",
                     "name": "LANG",
                     "description": "Idioma del sistema dentro del contenedor"
-                },
-                {
-                    "default": "es_ES.UTF-8",
-                    "label": "LC All",
-                    "name": "LC_ALL",
-                    "description": "Configuración regional del idioma y codificación utilizada por defecto dentro del contenedor"
                 },
                 {
                     "default": "es:es_ES",
