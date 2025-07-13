@@ -45,7 +45,7 @@ services:
       - vol_music:${SUBSONIC_DEFAULT_MUSIC_FOLDER}
       - vol_playlists:${SUBSONIC_DEFAULT_PLAYLIST_FOLDER}
       - vol_data:${SUBSONIC_HOME}
-    env:
+    environment:
       - SUBSONIC_HOME=${SUBSONIC_HOME}
       - SUBSONIC_HOST=${SUBSONIC_HOST}
       - SUBSONIC_PORT=5000
