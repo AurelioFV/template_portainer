@@ -1,0 +1,66 @@
+version: '3'
+
+volumes:
+  vol_music:
+    name: ${VOLUME_NAME_MUSIC}
+    external: true
+  vol_playlists:
+    name: ${VOLUME_NAME_PLAYLISTS}
+    external: true
+  vol_data:
+    name: ${VOLUME_NAME_DATA}
+    external: true
+  vol_postgres:
+    name: ${VOLUME_NAME_POSTGRES}
+    external: true
+  
+networks:
+  frontend:
+    name: ${NETWORK_FRONTEND}
+    external: true
+  backend:
+    name: ${NETWORK_BACKEND}
+
+services:
+  subsonic-db:
+    image: postgres:13
+    container_name: ${DB_HOSTNAME}
+    hostname: ${DB_HOSTNAME}
+    restart: always
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - vol_postgres:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  subsonic-app:
+    image: stuckj/subsonic:latest
+    container_name: ${APP_HOSTNAME}
+    hostname: ${APP_HOSTNAME}
+    restart: unless-stopped
+    volumes:
+      - vol_music:${SUBSONIC_DEFAULT_MUSIC_FOLDER}
+      - vol_playlists:${SUBSONIC_DEFAULT_PLAYLIST_FOLDER}
+      - vol_data:${SUBSONIC_HOME}
+    env:
+      - SUBSONIC_HOME=${SUBSONIC_HOME}
+      - SUBSONIC_HOST=${SUBSONIC_HOST}
+      - SUBSONIC_PORT=5000
+      - SUBSONIC_HTTPS_PORT=${SUBSONIC_HTTPS_PORT}
+      - SUBSONIC_CONTEXT_PATH=${SUBSONIC_CONTEXT_PATH}
+      - SUBSONIC_DB=jdbc:postgresql://subsonic-db:5432/subsonic?user=${POSTGRES_USER}&password=${POSTGRES_PASSWORD}
+      - SUBSONIC_MAX_MEMORY=${SUBSONIC_MAX_MEMORY}
+      - SUBSONIC_DEFAULT_MUSIC_FOLDER=${SUBSONIC_DEFAULT_MUSIC_FOLDER}
+      - SUBSONIC_DEFAULT_PODCAST_FOLDER=${SUBSONIC_DEFAULT_PODCAST_FOLDER}
+      - SUBSONIC_DEFAULT_PLAYLIST_FOLDER=${SUBSONIC_DEFAULT_PLAYLIST_FOLDER}
+      - SUBSONIC_UID=${SUBSONIC_UID}
+      - SUBSONIC_GID=${SUBSONIC_GID}
+    expose:
+      - 5000
+    networks:
+      - frontend
+      - backend
+

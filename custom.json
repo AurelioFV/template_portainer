@@ -98,7 +98,7 @@
             "title": "Nginx Proxy Manager",
             "name": "tmp_npm",
             "description": "Nginx Proxy Manager es una herramienta de administración de proxies inversos basada en Nginx, que te permite gestionar proxies, SSL y redes internas de manera fácil a través de una interfaz web. Ideal para manejar aplicaciones web y otros servicios que requieren enrutamiento a través de un servidor Nginx.",
-            "note": "Este template facilita el despliegue de Nginx Proxy Manager en Portainer.\n<br>Notas:\n<br>  - Asegúrate de tener configurada una red de Docker antes de iniciar el contenedor.\n<br>  - El contenedor requiere puertos específicos para ser accesible desde el navegador.\n<br>  - Accede al panel de administración a través de la URL configurada y las credenciales predeterminadas.\n<br>  - Los siguientes puertos serán utilizados:\n<br>    - **Puerto 80**: HTTP\n<br>    - **Puerto 443**: HTTPS\n<br>    - **Puerto 81**: Interfaz de administración",
+            "note": "Este template facilita el despliegue de Nginx Proxy Manager en Portainer.\n<br>Notas:\n<br>  - Asegúrate de tener configurada una red de Docker antes de iniciar el contenedor.\n<br>  - El contenedor requiere puertos específicos para ser accesible desde el navegador.\n<br>  - Accede al panel de administración a través de la URL configurada y las credenciales predeterminadas.\n<br>  - Los siguientes puertos serán utilizados:\n<br>    - <b>Puerto 80</b> HTTP\n<br>    - <b>Puerto 443</b>: HTTPS\n<br>    - <b>Puerto 81</b>: Interfaz de administración",
             "categories": [
                 "Web",
                 "Proxy",
@@ -157,7 +157,7 @@
                     "default": "npm-db",
                     "label": "DB Hostname",
                     "name": "DB_HOSTNAME",
-                    "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
+                    "description": "Nombre del contenedor de la Base de Datos."
                 },
                 {
                     "default": "npm",
@@ -189,7 +189,7 @@
                 },
                 {
                     "default": "npm-app",
-                    "label": "NPM Hostname",
+                    "label": "App Hostname",
                     "name": "NPM_HOSTNAME",
                     "description": "Nombre del contenedor en Docker. Esto ayuda a identificar el contenedor en el sistema."
                 },
@@ -227,6 +227,157 @@
                     "default": "npm_ssl_vm",
                     "label": "Volume Name (SSL)",
                     "name": "VOLUME_NAME_SSL",
+                    "description": "Nombre del volumen Docker donde se almacenarán los certificados SSL de la aplicación."
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "title": "Subsonic",
+            "name": "tmp_subsonic",
+            "description": "Subsonic es un servidor de streaming personal que permite acceder y reproducir tu música (y videos) desde cualquier lugar a través de Internet. Soporta múltiples formatos, usuarios, transcodificación en tiempo real y es ideal para tener tu propia plataforma tipo Spotify.",
+            "note": "Este template facilita el despliegue de Subsonic en Portainer.\n<br>Notas:\n<br>  - Asegúrate de tener configurados los volumenes necesarios y la una red de Docker antes de iniciar el contenedor.\n<br><b>  - El contenedor expone el puerto 5000</b>",
+            "categories": [
+                "Media",
+                "Streaming",
+                "Audio",
+                "Music Server"
+            ],
+            "platform": "linux",
+            "logo": "https://www.subsonic.org/pages/inc/img/subsonic_logo.png",
+            "repository": {
+                "url": "https://github.com/AurelioFV/template_portainer",
+                "stackfile": "custom_stacks/subsonic/subsonic.yml"
+            },
+            "env": [
+                {
+                    "label": "Network FrontEnd",
+                    "name": "NETWORK_FRONTEND",
+                    "description": "Selecciona una red Docker existente para el Fronend. Debe estar creada previamente.",
+                    "select": [
+                        {
+                            "text": "backend",
+                            "value": "backend"
+                        },
+                        {
+                            "text": "bridge",
+                            "value": "bridge"
+                        },
+                        {
+                            "text": "prx-network",
+                            "value": "prx-network",
+                            "default": true
+                        }
+                    ]
+                },
+                {
+                    "label": "Network BackEnd",
+                    "name": "NETWORK_BACKEND",
+                    "description": "Selecciona una red Docker para el Backend. Debe estar creada previamente.",
+                    "select": [
+                        {
+                            "text": "backend",
+                            "value": "backend",
+                            "default": true
+                        },
+                        {
+                            "text": "bridge",
+                            "value": "bridge"
+                        },
+                        {
+                            "text": "prx-network",
+                            "value": "prx-network"
+                        }
+                    ]
+                },
+                {
+                    "default": "npm-db",
+                    "label": "DB Hostname",
+                    "name": "DB_HOSTNAME",
+                    "description": "Nombre del contenedor de la Base de Datos."
+                },
+                {
+                    "default": "subsonic-app",
+                    "label": "App Hostname",
+                    "name": "APP_HOSTNAME",
+                    "description": "Nombre del contenedor de la aplicación"
+                },
+                {
+                    "name": "SUBSONIC_UID",
+                    "label": "User ID (UID)",
+                    "default": "1000",
+                    "description": "UID numérico del usuario que ejecuta Subsonic en el contenedor."
+                },
+                {
+                    "name": "SUBSONIC_GID",
+                    "label": "Group ID (GID)",
+                    "default": "1000",
+                    "description": "GID numérico del grupo del usuario en el contenedor."
+                },
+                {
+                    "name": "SUBSONIC_HOME",
+                    "label": "Subsonic Home Directory",
+                    "default": "/var/subsonic",
+                    "description": "Directorio de datos interno de Subsonic (dentro del contenedor)."
+                },
+                {
+                    "name": "SUBSONIC_HOST",
+                    "label": "Host IP",
+                    "default": "0.0.0.0",
+                    "description": "Interfaz IP a la que se enlaza Subsonic. No cambiar en contenedores, normalmente."
+                },
+                {
+                    "name": "SUBSONIC_HTTPS_PORT",
+                    "label": "HTTPS Port",
+                    "default": "0",
+                    "description": "Puerto HTTPS. Establecer en 0 para desactivar (por defecto)."
+                },
+                {
+                    "name": "SUBSONIC_CONTEXT_PATH",
+                    "label": "Context Path",
+                    "default": "/",
+                    "description": "Ruta en la URL donde se alojará Subsonic (por ejemplo, /subsonic)."
+                },
+                {
+                    "name": "SUBSONIC_DB",
+                    "label": "Database Connection String",
+                    "default": "",
+                    "description": "Cadena JDBC para la base de datos. Vacío usa la DB por defecto (HSQLDB en memoria)."
+                },
+                {
+                    "name": "SUBSONIC_MAX_MEMORY",
+                    "label": "Max Memory (MB)",
+                    "default": "1024",
+                    "description": "Memoria máxima en MB que puede usar Subsonic."
+                },
+                {
+                    "name": "SUBSONIC_DEFAULT_MUSIC_FOLDER",
+                    "label": "Music Folder",
+                    "default": "/var/music",
+                    "description": "Carpeta por defecto para la música (dentro del contenedor)."
+                },
+                {
+                    "name": "SUBSONIC_DEFAULT_PODCAST_FOLDER",
+                    "label": "Podcast Folder",
+                    "default": "/var/music/Podcast",
+                    "description": "Carpeta por defecto para los podcasts (dentro del contenedor)."
+                },
+                {
+                    "name": "SUBSONIC_DEFAULT_PLAYLIST_FOLDER",
+                    "label": "Playlist Folder",
+                    "default": "/var/playlists",
+                    "description": "Carpeta por defecto para las playlists (dentro del contenedor)."
+                },
+                {
+                    "default": "subsonic_app_vm",
+                    "label": "Volume Name (App)",
+                    "name": "VOLUME_NAME_APP",
+                    "description": "Nombre del volumen Docker donde se almacenarán los datos de la aplicación Nginx Proxy Manager."
+                },
+                {
+                    "default": "subsonic_data_vm",
+                    "label": "Volume Name (SSL)",
+                    "name": "VOLUME_NAME_DATA",
                     "description": "Nombre del volumen Docker donde se almacenarán los certificados SSL de la aplicación."
                 }
             ]
