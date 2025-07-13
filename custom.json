@@ -369,16 +369,28 @@
                     "description": "Carpeta por defecto para las playlists (dentro del contenedor)."
                 },
                 {
-                    "default": "subsonic_app_vm",
-                    "label": "Volume Name (App)",
-                    "name": "VOLUME_NAME_APP",
-                    "description": "Nombre del volumen Docker donde se almacenarán los datos de la aplicación Nginx Proxy Manager."
+                    "default": "subsonic_music_vm",
+                    "label": "Volume Name (Music)",
+                    "name": "VOLUME_NAME_MUSIC",
+                    "description": "Nombre del volumen Docker donde se almacenará la música para Subsonic."
+                },
+                {
+                    "default": "subsonic_playlists_vm",
+                    "label": "Volume Name (Playlists)",
+                    "name": "VOLUME_NAME_PLAYLISTS",
+                    "description": "Nombre del volumen Docker donde se almacenarán las listas de reproducción."
                 },
                 {
                     "default": "subsonic_data_vm",
-                    "label": "Volume Name (SSL)",
+                    "label": "Volume Name (App Data)",
                     "name": "VOLUME_NAME_DATA",
-                    "description": "Nombre del volumen Docker donde se almacenarán los certificados SSL de la aplicación."
+                    "description": "Nombre del volumen Docker donde se almacenarán los datos de configuración y estado de Subsonic."
+                },
+                {
+                    "default": "subsonic_postgres_vm",
+                    "label": "Volume Name (PostgreSQL Data)",
+                    "name": "VOLUME_NAME_POSTGRES",
+                    "description": "Nombre del volumen Docker donde se almacenarán los datos persistentes de la base de datos PostgreSQL."
                 }
             ]
         }
