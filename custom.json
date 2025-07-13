@@ -291,7 +291,7 @@
                     ]
                 },
                 {
-                    "default": "npm-db",
+                    "default": "subsonic-db",
                     "label": "DB Hostname",
                     "name": "DB_HOSTNAME",
                     "description": "Nombre del contenedor de la Base de Datos."
@@ -339,12 +339,6 @@
                     "description": "Ruta en la URL donde se alojará Subsonic (por ejemplo, /subsonic)."
                 },
                 {
-                    "name": "SUBSONIC_DB",
-                    "label": "Database Connection String",
-                    "default": "",
-                    "description": "Cadena JDBC para la base de datos. Vacío usa la DB por defecto (HSQLDB en memoria)."
-                },
-                {
                     "name": "SUBSONIC_MAX_MEMORY",
                     "label": "Max Memory (MB)",
                     "default": "1024",
@@ -385,6 +379,24 @@
                     "label": "Volume Name (App Data)",
                     "name": "VOLUME_NAME_DATA",
                     "description": "Nombre del volumen Docker donde se almacenarán los datos de configuración y estado de Subsonic."
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "PostgreSQL Database Name",
+                    "default": "subsonic",
+                    "description": "Nombre de la base de datos que usará Subsonic."
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "label": "PostgreSQL Username",
+                    "default": "subsonic",
+                    "description": "Nombre de usuario de la base de datos PostgreSQL."
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "label": "PostgreSQL Password",
+                    "default": "subsonicpass",
+                    "description": "Contraseña del usuario de la base de datos PostgreSQL."
                 },
                 {
                     "default": "subsonic_postgres_vm",
