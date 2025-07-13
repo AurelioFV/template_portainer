@@ -40,10 +40,8 @@ services:
       - SUBSONIC_DEFAULT_PLAYLIST_FOLDER=${SUBSONIC_DEFAULT_PLAYLIST_FOLDER}
       - SUBSONIC_UID=${SUBSONIC_UID}
       - SUBSONIC_GID=${SUBSONIC_GID}
-    # expose:
-    #   - 5000
-    ports:
-      - 4040:4040
+    expose:
+      - 5000
     networks:
       - net
 
