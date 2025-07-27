@@ -2,6 +2,7 @@
     "version": "3",
     "templates": [
         {
+            "id": 1,
             "type": 3,
             "title": "Code Server",
             "name": "tmp_vscode",
@@ -100,6 +101,7 @@
             ]
         },
         {
+            "id": 2,
             "type": 3,
             "title": "Nginx Proxy Manager",
             "name": "tmp_npm",
@@ -238,6 +240,7 @@
             ]
         },
         {
+            "id": 3,
             "type": 3,
             "title": "Subsonic",
             "name": "tmp_subsonic",
