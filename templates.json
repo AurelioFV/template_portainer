@@ -18,7 +18,8 @@
                 {
                     "container": "/usr/local/apache2/htdocs/"
                 }
-            ]
+            ],
+            "id": 1
         },
         {
             "categories": [
@@ -64,7 +65,8 @@
                     "bind": "/portainer/Movies",
                     "container": "/movies"
                 }
-            ]
+            ],
+            "id": 2
         },
         {
             "categories": [
@@ -107,7 +109,8 @@
                 "url": "https://github.com/AurelioFV/template_portainer"
             },
             "title": "Bookstack",
-            "type": 3
+            "type": 3,
+            "id": 3
         },
         {
             "type": 3,
@@ -162,7 +165,8 @@
                     "label": "PROXY_DOMAIN",
                     "name": "PROXY_DOMAIN"
                 }
-            ]
+            ],
+            "id": 4
         },
         {
             "categories": [
@@ -201,7 +205,8 @@
                     "bind": "/portainer/Downloads",
                     "container": "/downloads"
                 }
-            ]
+            ],
+            "id": 5
         },
         {
             "type": 3,
@@ -258,7 +263,8 @@
                     "description": "Host port to expose HTTPS port of Dokku (443 if empty)",
                     "default": "443"
                 }
-            ]
+            ],
+            "id": 6
         },
         {
             "categories": [
@@ -301,7 +307,8 @@
                 {
                     "container": "/source"
                 }
-            ]
+            ],
+            "id": 7
         },
         {
             "type": 1,
@@ -321,7 +328,8 @@
                 {
                     "container": "/usr/share/elasticsearch/data"
                 }
-            ]
+            ],
+            "id": 8
         },
         {
             "type": 1,
@@ -341,7 +349,8 @@
                 {
                     "container": "/var/lib/ghost/content"
                 }
-            ]
+            ],
+            "id": 9
         },
         {
             "type": 1,
@@ -369,7 +378,8 @@
                 {
                     "container": "/var/opt/gitlab"
                 }
-            ]
+            ],
+            "id": 10
         },
         {
             "categories": [
@@ -406,7 +416,8 @@
                     "bind": "/portainer/Files/AppData/Config/Heimdall",
                     "container": "/config"
                 }
-            ]
+            ],
+            "id": 11
         },
         {
             "type": 2,
@@ -421,7 +432,8 @@
             "repository": {
                 "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/ironfunctions/docker-stack.yml"
-            }
+            },
+            "id": 12
         },
         {
             "categories": [
@@ -459,7 +471,8 @@
                     "bind": "/portainer/Downloads",
                     "container": "/downloads"
                 }
-            ]
+            ],
+            "id": 13
         },
         {
             "type": 1,
@@ -480,7 +493,8 @@
                 {
                     "container": "/var/jenkins_home"
                 }
-            ]
+            ],
+            "id": 14
         },
         {
             "type": 1,
@@ -522,7 +536,8 @@
                     "volumes": "kavita-books",
                     "container": "/books"
                 }
-            ]
+            ],
+            "id": 15
         },
         {
             "type": 3,
@@ -559,7 +574,8 @@
                     "label": "PORT",
                     "name": "PORT"
                 }
-            ]
+            ],
+            "id": 16
         },
         {
             "type": 3,
@@ -579,7 +595,8 @@
                     "name": "POSTGRES_PASSWORD",
                     "label": "Postgres password"
                 }
-            ]
+            ],
+            "id": 17
         },
         {
             "type": 1,
@@ -604,7 +621,8 @@
                 {
                     "container": "/var/lib/mysql"
                 }
-            ]
+            ],
+            "id": 18
         },
         {
             "type": 1,
@@ -623,7 +641,8 @@
                 {
                     "container": "/data/db"
                 }
-            ]
+            ],
+            "id": 19
         },
         {
             "type": 1,
@@ -653,7 +672,8 @@
                 {
                     "container": "/var/lib/mysql"
                 }
-            ]
+            ],
+            "id": 20
         },
         {
             "type": 3,
@@ -705,7 +725,8 @@
                     "label": "PORT",
                     "name": "PORT"
                 }
-            ]
+            ],
+            "id": 21
         },
         {
             "type": 1,
@@ -729,7 +750,8 @@
                 {
                     "container": "/usr/share/nginx/html"
                 }
-            ]
+            ],
+            "id": 22
         },
         {
             "categories": [
@@ -765,7 +787,8 @@
                     "bind": "/portainer/Files/AppData/Config/Nginx-Proxy/letsencrypt",
                     "container": "/etc/letsencrypt"
                 }
-            ]
+            ],
+            "id": 23
         },
         {
             "type": 1,
@@ -781,7 +804,8 @@
             "ports": [
                 "80/tcp"
             ],
-            "restart_policy": "always"
+            "restart_policy": "always",
+            "id": 24
         },
         {
             "categories": [
@@ -822,7 +846,8 @@
                     "bind": "/portainer/Files/AppData/Config/OpenVPN-AS",
                     "container": "/config"
                 }
-            ]
+            ],
+            "id": 25
         },
         {
             "categories": [
@@ -854,7 +879,8 @@
                     "bind": "/portainer/Files/AppData/Config/PiHole/DNS",
                     "container": "/etc/dnsmasq.d"
                 }
-            ]
+            ],
+            "id": 26
         },
         {
             "categories": [
@@ -899,7 +925,8 @@
                     "bind": "/portainer/Movies",
                     "container": "/movies"
                 }
-            ]
+            ],
+            "id": 27
         },
         {
             "type": 2,
@@ -914,7 +941,8 @@
             "repository": {
                 "url": "https://github.com/AurelioFV/template_portainer",
                 "stackfile": "stacks/portainer-agent/docker-stack.yml"
-            }
+            },
+            "id": 28
         },
         {
             "type": 1,
@@ -943,7 +971,8 @@
                 {
                     "container": "/var/lib/postgresql/data"
                 }
-            ]
+            ],
+            "id": 29
         },
         {
             "categories": [
@@ -981,7 +1010,8 @@
                     "bind": "/portainer/Files/AppData/Config/ProjectSend",
                     "container": "/config"
                 }
-            ]
+            ],
+            "id": 30
         },
         {
             "title": "Sematext Docker Agent",
@@ -1006,7 +1036,8 @@
                     "name": "SPM_TOKEN",
                     "label": "SPM monitoring token"
                 }
-            ]
+            ],
+            "id": 31
         },
         {
             "type": 1,
@@ -1032,7 +1063,8 @@
                     "name": "SA_PASSWORD",
                     "label": "SA password"
                 }
-            ]
+            ],
+            "id": 32
         },
         {
             "categories": [
@@ -1079,13 +1111,14 @@
                     "bind": "/portainer/Downloads",
                     "container": "/downloads"
                 }
-            ]
+            ],
+            "id": 33
         },
         {
             "categories": [
                 "Downloaders"
             ],
-            "description": "Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.",
+            "description": "Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, \u00b5TP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.",
             "env": [
                 {
                     "default": "1000",
@@ -1121,7 +1154,8 @@
                 {
                     "container": "/watch"
                 }
-            ]
+            ],
+            "id": 34
         },
         {
             "categories": [
@@ -1182,7 +1216,8 @@
                     "bind": "/etc/localtime",
                     "container": "/etc/localtime"
                 }
-            ]
+            ],
+            "id": 35
         },
         {
             "type": 1,
@@ -1195,7 +1230,8 @@
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
             "image": "ubuntu:latest",
             "interactive": true,
-            "command": "/bin/bash"
+            "command": "/bin/bash",
+            "id": 36
         },
         {
             "type": 3,
@@ -1232,7 +1268,8 @@
                     "label": "Database name",
                     "description": "Database name."
                 }
-            ]
+            ],
+            "id": 37
         },
         {
             "categories": [
@@ -1270,7 +1307,8 @@
                     "bind": "/portainer/Files/AppData/Youtube/Audio",
                     "container": "/app/audio"
                 }
-            ]
+            ],
+            "id": 38
         }
     ]
 }
